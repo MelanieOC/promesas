@@ -4,26 +4,29 @@
   padding: 20px;
   color: white;
   text-align: center;
-  position: fixed;
-  width: 100%;
 }
 .planets-content{
-  padding-top: 150px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .planet{
   border: 2px solid gray;
   border-radius: 10px;
-  min-width:500px;
+  width:500px;
   padding: 20px;
   margin: 30px 20px;
+  position: relative;
 }
 .planet img{
   width: 100%;
   height: 350px;
 }
 .planet a{
-  align-self: right;
+  position:absolute;
+  right: 10px;
   text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 2px;
 }
 
