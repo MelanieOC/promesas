@@ -1,0 +1,11 @@
+{
+	"query": "earth-like planets",
+	"results": [
+		"planets/Kepler-22b.json",
+		"planets/Kepler-62f.json",
+		"planets/Kepler-69c.json",
+		"planets/Kepler-186f.json",
+		"planets/Kepler-452b.json",
+		"planets/GJ667Cc.json"
+	]
+}
