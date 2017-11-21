@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store';
 import {Provider} from 'redux-zero/react';
-
+import { getPlanets } from './actions';
 
 const Index = () => {
     return (
@@ -14,6 +14,7 @@ const Index = () => {
         </Provider>
     );
 }
+getPlanets();
 
 ReactDOM.render(<Index />, document.getElementById('root'));
 registerServiceWorker();

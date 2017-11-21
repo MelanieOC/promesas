@@ -1,18 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { connect } from 'redux-zero/react';
+import { Image } from 'react-bootstrap';
 
+const Planet = ({ planet }) => {
+  return (
+    <div className='planet'>
+      <Image src={planet.pl_img} responsive />
+      <h3>{planet.pl_name}</h3>
+      <h4>Description</h4>
+      <ul>
+      <li><strong>Radio: </strong>{planet.ra}</li>
+      <li>Discovered in {planet.pl_disc} with {planet.pl_telescope}</li>
+      </ul>
+      <a href={planet.pl_edelink}>More Details</a>
+    </div>
+  )
+}
 const App = ({ planets }) => {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to React</h1>
+        <h1>Exoplanet Explorer</h1>
+        <h3>Learn more about planets around other stars!</h3>
       </header>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+      <div className='planets-content'>
+        {planets.map(a => <Planet planet={a} />)}
+      </div>
     </div>
   );
 }
